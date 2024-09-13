@@ -1,0 +1,42 @@
+#starting-links {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.starting-link-item {
+    width: 49%;
+    min-width: 400px;
+    height: 50vh;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    text-decoration: none;
+    color: rgb(217, 217, 217);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    transition: 0.5s;
+}
+.starting-link-item:hover {
+    border: 1px solid rgb(40, 75, 99);
+    background-color: rgba(40, 75, 99, 0.25);
+    transition: 1s;
+}
+
+#starting-links h2 {
+    width: 100%;
+    margin: 5px;
+    padding: 0px;
+    text-align: center;
+}
+#starting-links i {
+    width: 100%;
+    margin: 5px;
+    padding: 0px;
+    text-align: center;
+    font-size: 50px;
+}

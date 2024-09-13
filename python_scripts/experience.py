@@ -42,41 +42,64 @@ it_years = f'{int(it_months/12)}y {it_months % 12}m'
 
 title = f'Total experience with analytical work: {total_years}<br>Included IT experience: {it_years}'
 
-def add_trace(label: str, name: str, values, showlegend: bool = True):
+
+def add_trace(label: str, name: str, values, color: str):
     fig.add_trace(go.Scatter(
         name=name,
-        x=[label, label],
-        y=values,
+        y=[label, label],
+        x=values,
         mode='lines',
         line=dict(width=20),
-        showlegend=showlegend
+        marker_color=color
     ))
+
+
+colors = [
+    'rgb(169, 214, 229)',
+    'rgb(137, 194, 217)',
+    'rgb(97, 165, 194)',
+    'rgb(70, 143, 175)',
+    'rgb(44, 125, 160)',
+    'rgb(42, 111, 151)',
+    'rgb(1, 79, 134)',
+    'rgb(1, 73, 124)',
+]
 
 
 fig = go.Figure()
 
-add_trace('', '', [dates_abs[0], dates_abs[0]], False)
-add_trace('Academic Work', f'PhD', dates_academic)
-add_trace('Flow Research Center', f'Junior Researcher', dates_flow)
-add_trace('Asseco Business Solutions', f'Junior Data Scientist', dates_abs)
-add_trace('WeSub', f'Data Scientist', dates_wesub)
-add_trace('Playstrict (side)', f'Data Scientist (side project)', dates_playstrict_side)
-add_trace('DigitalFirst (side)', f'Data Scientist (side project)', dates_df_side)
-add_trace('Essyo (side)', f'Data Scientist (side project)', dates_essyo_side)
-add_trace('DigitalFirst (current)', f'Senior Data Scientist', dates_df_b2b)
-add_trace(' ', '', [dates_abs[0], dates_abs[0]], False)
+add_trace('Academic Work - PhD', f'PhD', dates_academic, colors[0])
+add_trace('Flow Research Center - Jr Researcher', f'Junior Researcher', dates_flow, colors[1])
+add_trace('Asseco Business Solutions - Jr Data Scientist', f'Jr Data Scientist', dates_abs, colors[2])
+add_trace('WeSub - Data Scientist', f'Data Scientist', dates_wesub, colors[3])
+add_trace('Playstrict - Data Scientist (side project)', f'Data Scientist (side project)', dates_playstrict_side, colors[4])
+add_trace('DigitalFirst - Data Scientist (side project)', f'Data Scientist (side project)', dates_df_side, colors[5])
+add_trace('Essyo - Data Scientist (side project)', f'Data Scientist (side project)', dates_essyo_side, colors[6])
+add_trace('DigitalFirst - Senior Data Scientist (current)', f'Senior Data Scientist (current)', dates_df_b2b, colors[7])
 
+fig.add_trace(
+    go.Scatter(
+        x=[dates_abs[0], dates_abs[0]],
+        y=['Academic Work - PhD', 'DigitalFirst - Senior Data Scientist (current)'],
+        mode='lines+text',
+        text=['', 'Here I changed my career to IT'],
+        textposition='top right',
+        marker_color='rgb(187, 68, 48)'
+    )
+)
 
 fig.update_layout(
     title=title,
-    width=1000,
-    height=800,
+    width=1600,
+    height=600,
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
-    xaxis=dict(gridcolor='silver', linecolor='black', title='company'),
-    yaxis=dict(gridcolor='rgba(0,0,0,0)', linecolor='black', title='timeline', range=(dates_academic[0], dates_df_b2b[1])),
+    yaxis=dict(gridcolor='rgba(217, 217, 217, 0.5)', linecolor='rgba(0,0,0,0)'),
+    xaxis=dict(gridcolor='rgba(0,0,0,0)', linecolor='rgba(0,0,0,0)', title='timeline', range=(dates_academic[0], dates_df_b2b[1])),
+    font=dict(color='rgb(217, 217, 217)', family='Verdana'),
+    showlegend=False
 )
 
 
-with open('plotly_figures/experience_figure.html', 'w', encoding='UTF-8') as file:
+with open('assets/experience_figure.html', 'w', encoding='UTF-8') as file:
     file.write(fig.to_html())
