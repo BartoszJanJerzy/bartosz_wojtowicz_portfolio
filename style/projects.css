@@ -1,0 +1,41 @@
+#hobby-projects-subpage {
+    padding-bottom: 200px;
+}
+
+#projects-div {
+    width: 80%;
+    min-width: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    width: 45%;
+    min-width: 400px;
+    padding: 0px;
+    margin: 10px;
+    border: 1px solid rgba(187, 68, 48, 0);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.project-item:hover {
+    border-bottom: 1px solid rgba(187, 68, 48, 1);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.project-item h3 {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    background-color: rgb(187, 68, 48);
+}
+.project-item a {
+    width: 100%;
+    text-decoration: none;
+    color: rgb(217, 217, 217);
+    border-bottom: 1px solid rgb(40, 75, 99);
+}

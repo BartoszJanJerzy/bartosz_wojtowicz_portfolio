@@ -1,0 +1,57 @@
+<h2>Hobby python projects</h2>
+<div id="projects-div">
+    <div class="project-item">
+        <h3>LGBM Tanks</h3>
+        <h4>Overview</h4>
+        <p>I was reminded a retro game Scorched Earth. Why not code it in <b>Python</b>?</p>
+        <p>I've first steps in <b>pygame</b> and coded a simple game where two players shoot to themselves with tanks.</p>
+        <p>I've implemented as bullet shot engine with air conditions (e.g. wind). It's based on <b>physical model of movement</b></p>
+        <p>Why not use <b>AI</b> to control those tanks?</p>
+        <p>I've run an following experiment</p>
+        <ul>
+            <li>forget about physical movement model - you know nothing about physics</li>
+            <li>however, you are able to train and implement <b>machine learning</b> model</li>
+            <li>
+                train <b>LGBModels</b> to predict a result of a shot basing on state (e.g. player coordinates, wind)
+                and action (shot angle, shot power)
+            </li>
+            <li>choose action that leads to the best result</li>
+        </ul>
+        <p>AI Tanks started to shoot precisely (~) after 1600 games</p>
+        <h4>Tech Stack</h4>
+        <ul>
+            <li>python 3.12</li>
+            <li>pygame</li>
+            <li>LightGBM</li>
+        </ul>
+        <h4>References</h4>
+        <ul>
+            <li><a href="files/tanks_lgbm.pdf" target=”_blank”>PDF presentation</a></li>
+            <li><a href="https://www.youtube.com/watch?v=NIIhExdpUH0" target=”_blank”>Short video with example games</a></li>
+        </ul>
+    </div>
+
+        <div class="project-item">
+            <h3>Deforestation Recognition</h3>
+            <h4>Overview</h4>
+            <p>I was invited to the hackathon on Linkedin by <b>Schneider electric</b> recruiters.</p>
+            <p>Dataset contained satellite photos of 3 deforestation types.</p>
+            <p>The task was to train <b>classification model</b> to recognize the deforestation type.</p>
+            <p>The main problem was imbalanced data</p>
+            <ul>
+                <li>I splitted datasets in 2 parts with balanced classes (split by photo year)</li>
+                <li>trained two models for different dataset</li>
+                <li>multiplicated datasets with synthetic photos</li>
+            </ul>
+            <h4>Tech Stack</h4>
+            <ul>
+                <li>python</li>
+                <li>tensorflow</li>
+                <li>cv2</li>
+            </ul>
+            <h4>References</h4>
+            <ul>
+                <li><a href="https://github.com/BartoszJanJerzy/NUWE-Deforestation/blob/main/utils/augmentation.py" target=”_blank”>Repo</a></li>
+            </ul>
+        </div>
+</div>
