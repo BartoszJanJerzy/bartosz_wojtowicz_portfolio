@@ -1,0 +1,6 @@
+red = rgb(187, 68, 48)
+dark = rgb(53, 53, 53)
+teal = rgb(60, 110, 113)
+white = rgb(255, 255, 255)
+lgrey = rgb(217, 217, 217)
+dblue = rgb(40, 75, 99)

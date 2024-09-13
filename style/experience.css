@@ -1,0 +1,10 @@
+#experience-graph {
+    width: 1500px;
+    height: 920px;
+    margin: 0px auto;
+    color:color: rgb(217, 217, 217);
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+}

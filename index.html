@@ -5,23 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/start.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/experience.css">
+    <link rel="stylesheet" href="style/tech.css">
+    <link rel="stylesheet" href="style/projects.css">
+    <script src="https://kit.fontawesome.com/e92f81d249.js" crossorigin="anonymous"></script>
+
+    <script src="jquery.js"></script>
+    <script>
+    $(function(){
+        $("#starting-links").load("pages/start.html");
+        $("#about-subpage").load("pages/about.html");
+        $("#tech-stack-subpage").load("pages/tech.html");
+        $("#hobby-projects-subpage").load("pages/projects.html");
+        $("#experience-graph").load("assets/experience_figure.html");
+    });
+    </script>
 </head>
 <body>
 <!--    0 - Header section-->
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
+<!--    <header>-->
+<!--        <h1>Welcome to My Portfolio</h1>-->
+<!--    </header>-->
 
 
-<!--    1 - About section-->
-    <div class="section">
-        <h2>About</h2>
+<!--    1 - Starting links-->
+    <div id="starting-links"></div>
+
+<!--    About subpage-->
+    <div id="about-subpage" class="subpage"></div>
+
+<!--    Experience subpage-->
+    <div id="experience-subpage" class="subpage">
+        <h2>Professional experience</h2>
+        <div id="experience-graph"></div>
     </div>
 
+<!--    Tech Stack-->
+    <div id="tech-stack-subpage" class="subpage"></div>
 
-<!--    2 - Experience section-->
-    <div class="section">
-        <h2>Experience</h2>
-    </div>
+<!--    Hobby projects-->
+    <div id="hobby-projects-subpage" class="subpage"></div>
+
 </body>
 </html>
