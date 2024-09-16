@@ -26,7 +26,7 @@
     transition: 0.5s;
 }
 .tech-item:hover {
-    border: 1px solid rgb(40, 75, 99);
+    border: 1px solid rgba(187, 68, 48, 1);
     transition: 0.5s;
 }
 

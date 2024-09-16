@@ -10,13 +10,6 @@ body {
     background-color: rgb(53, 53, 53);
 }
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
 .subpage {
     min-height: 950px;
     display: flex;
@@ -30,5 +23,22 @@ header {
     height: 100px;
     text-align: center;
     padding-top: 60px;
-    background-color: rgb(60, 110, 113)
+    background-color: rgb(60, 110, 113);
+}
+
+#header {
+    z: 10000;
+    display: none;
+    position: sticky;
+    top: 0;
+    width: 200px;
+    background-color: rgb(40, 75, 99);
+    padding: 20px;
+    text-align: center;
+}
+#header a {
+    text-decoration: none;
+    color: rgb(217, 217, 217);
+    font-size: 20px;
+    margin: 5px;
 }
