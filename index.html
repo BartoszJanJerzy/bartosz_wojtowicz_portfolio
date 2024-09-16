@@ -11,24 +11,18 @@
     <link rel="stylesheet" href="style/tech.css">
     <link rel="stylesheet" href="style/projects.css">
     <script src="https://kit.fontawesome.com/e92f81d249.js" crossorigin="anonymous"></script>
-
-    <script src="jquery.js"></script>
-    <script>
-    $(function(){
-        $("#starting-links").load("pages/start.html");
-        $("#about-subpage").load("pages/about.html");
-        $("#tech-stack-subpage").load("pages/tech.html");
-        $("#hobby-projects-subpage").load("pages/projects.html");
-        $("#experience-graph").load("assets/experience_figure.html");
-    });
-    </script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/header_display.js" async></script>
+    <script src="scripts/include_html.js" async></script>
 </head>
 <body>
 <!--    0 - Header section-->
-<!--    <header>-->
-<!--        <h1>Welcome to My Portfolio</h1>-->
-<!--    </header>-->
-
+    <div id="header">
+        <a href="#about-subpage"><i class="fa-solid fa-user"></i></a>
+        <a href="#experience-subpage"><i class="fa-solid fa-clock"></i></a>
+        <a href="#tech-stack-subpage"><i class="fa-solid fa-microchip"></i></a>
+        <a href="#hobby-projects-subpage"><i class="fa-solid fa-square-poll-vertical"></i></a>
+    </div>
 
 <!--    1 - Starting links-->
     <div id="starting-links"></div>
